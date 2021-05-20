@@ -47,7 +47,7 @@ const DishAdder  = () => {
             fat: e.target.fatsInput.value,
             calorie: e.target.caloriecalc.value
         }
-        // console.log(obj);
+        
         dispatch(addDish(obj));
         setName('');
         setProtein(0);
@@ -90,7 +90,7 @@ const DishAdder  = () => {
                             >
                                 <label for="proteinInput" className="form-label col-lg-2 col-12 m-auto">Proteins</label>
                                 <div className="col-lg-10 col-12 p-0">
-                                    <input type="text" 
+                                    <input type="number" 
                                         className="form-control" 
                                         id="proteinInput" 
                                         placeholder = "0"
@@ -105,7 +105,7 @@ const DishAdder  = () => {
                             >
                                 <label for="carbInput" className="form-label col-lg-2 col-12 m-auto">Carbs</label>
                                 <div className="col-lg-10 col-12 p-0">
-                                    <input type="text" 
+                                    <input type="number" 
                                         className="form-control" 
                                         id="carbInput" 
                                         placeholder = "0"
@@ -120,7 +120,7 @@ const DishAdder  = () => {
                             >
                                 <label for="fatsInput" className="form-label col-lg-2 col-12 m-auto">Fats</label>
                                 <div className="col-lg-10 col-12 p-0">
-                                    <input type="text" 
+                                    <input type="number" 
                                         className="form-control" 
                                         id="fatsInput" 
                                         placeholder = "0"
@@ -135,7 +135,7 @@ const DishAdder  = () => {
                             >
                                 <label for="caloriecalc" className="form-label col-lg-2 col-12 m-auto">Calories</label>
                                 <div className="col-lg-10 col-12 p-0">
-                                    <input type="text"
+                                    <input type="number"
                                         className="form-control" 
                                         id="caloriecalc" 
                                         placeholder = "0"
@@ -146,7 +146,7 @@ const DishAdder  = () => {
                             </motion.div>
                             <motion.button
                                 type='submit' 
-                                className="col-3 mx-auto btn btn-primary"
+                                className="col-5 mx-auto btn btn-primary"
                                 whileHover={{scale: 1.3}}
                                 whileTap={{scale: 0.9}}
                             >Submit</motion.button>

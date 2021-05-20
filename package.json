@@ -2,7 +2,7 @@
   "name": "evolv-fit",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ap-darknight.github.io/dish-project",
+  "homepage": "https://ap-darknight.github.io/dish-project/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",

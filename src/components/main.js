@@ -9,9 +9,9 @@ const Main = () => {
         <div style={{fontFamily: 'Josefin Sans, sans-serif'}}>  
             <Sidebar />
             <Switch>
-                <Route path="/admin"> <Admin /> </Route>
-                <Route path="/user"> <User /> </Route>
-                <Redirect from='/' to='/user' />
+                <Route exact path="/user" component={User} />
+                <Route exact path="/admin" component={Admin} />
+                <Redirect from='/' to='/user'/>
             </Switch>
         </div>
     );
