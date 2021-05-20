@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {motion} from 'framer-motion';
 import { useDispatch} from 'react-redux';
 import addDish from '../../Redux/Actions/addDish';
-import {v4} from 'uuid';
+import {v4 as uuid} from 'uuid';
 
 
 const DishAdder  = () => {
@@ -40,14 +40,20 @@ const DishAdder  = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         var obj = {
-            id: v4(name),
-            name: name,
-            protein: proteins,
-            carb: carbs,
-            fat: fats,
-            calorie: calories
+            id: uuid(name),
+            name: e.target.dishName.value,
+            protein: e.target.proteinInput.value,
+            carb: e.target.carbInput.value,
+            fat: e.target.fatsInput.value,
+            calorie: e.target.caloriecalc.value
         }
+        // console.log(obj);
         dispatch(addDish(obj));
+        setName('');
+        setProtein(0);
+        setCarbs(0);
+        setFat(0);
+        setCalorie(0);
     }
 
     return (
@@ -62,7 +68,7 @@ const DishAdder  = () => {
                     </div>
                     <hr/>
                     <div className="container p-2">
-                        <form className="row">
+                        <form className="row" onSubmit={handleSubmit}>
                             <motion.div className="row col-12 m-0 mb-3"
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 0.9}}
@@ -139,7 +145,7 @@ const DishAdder  = () => {
                                 </div>
                             </motion.div>
                             <motion.button
-                                onClick={handleSubmit} 
+                                type='submit' 
                                 className="col-3 mx-auto btn btn-primary"
                                 whileHover={{scale: 1.3}}
                                 whileTap={{scale: 0.9}}

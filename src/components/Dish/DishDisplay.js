@@ -24,7 +24,7 @@ const DishDisplay = ({admin}) => {
                 </tr>
                 <hr className="m-0" />
                 {data && data.map((obj, i) => {
-                    return <PutDish obj={obj} index={i} admin={admin} />        
+                    return <PutDish obj={obj} key={i} admin={admin} />        
                 })}
             </table>
         </div>

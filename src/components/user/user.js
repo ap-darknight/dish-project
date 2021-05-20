@@ -16,9 +16,9 @@ const User = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        const pattern = new RegExp(data, 'gi');
-        const vec = store.getState().dishes.filter(dish => pattern.test(dish.name));
-        console.log(vec);
+        // const pattern = new RegExp(data, 'gi');
+        const vec = store.getState().dishes.filter(dish => dish.name.toLowerCase().includes(data.toLowerCase()));
+        
         setVectorData(vec); 
         setDisplay('d-block');
     }

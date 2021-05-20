@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import {motion} from 'framer-motion';
 import {useDispatch} from 'react-redux';
 import deleteDish from '../../Redux/Actions/deleteDish'
-import addDish from '../../Redux/Actions/addDish'
+import editDish from '../../Redux/Actions/editDish'
 import { Button, Modal, ModalBody} from 'reactstrap';
 
-const PutDish = ({obj, index, admin}) => {
+const PutDish = ({obj, admin}) => {
     const dispatch = useDispatch();
 
     const handleDelete = (e) => {
@@ -55,12 +55,12 @@ const PutDish = ({obj, index, admin}) => {
             fat: fats,
             calorie: calories
         }
-        dispatch(deleteDish(OBJ.id));
-        dispatch(addDish(OBJ));
+        dispatch(editDish(OBJ));
         toggle();
     }
 
     return (
+        <>
         <motion.tr className="row text-center"
             whileHover={{scale: 1.02}}
         >
@@ -81,81 +81,80 @@ const PutDish = ({obj, index, admin}) => {
                         whileHover={{scale: 1.02}}
                         whileTap={{scale: 0.9}}  
                     >delete</motion.button>
-                <div>
-                    
-                </div>
-                    <Modal isOpen={modal} toggle={toggle} className="container">
-                        <ModalBody>
-                            <h2 className="display-6">Update Dish</h2>
-                            <hr/>
-                            <form className="row">
-                                <div className="row col-12 m-0 mb-3">
-                                    <label for="dishName" className="form-label col-lg-4 col-12 m-auto">Dish Name</label>
-                                    <div className="col-lg-8 col-12 p-0">
-                                        <input type="text" 
-                                            className="form-control" 
-                                            id="dishName" 
-                                            value = {name}
-                                            onChange = {handleName}      
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-12 row m-0 mb-3">
-                                    <label for="proteinInput" className="form-label col-lg-4 col-12 m-auto">Proteins</label>
-                                    <div className="col-lg-8 col-12 p-0">
-                                        <input type="text" 
-                                            className="form-control" 
-                                            id="proteinInput" 
-                                            placeholder = "0"
-                                            value={proteins}
-                                            onChange={handleProtein}
-                                            />
-                                    </div>
-                                </div>
-                                <div className="col-12 row m-0 mb-3">
-                                    <label for="carbInput" className="form-label col-lg-4 col-12 m-auto">Carbs</label>
-                                    <div className="col-lg-8 col-12 p-0">
-                                        <input type="text" 
-                                            className="form-control" 
-                                            id="carbInput" 
-                                            placeholder = "0"
-                                            value={carbs}
-                                            onChange={handleCarbs}    
-                                            />
-                                    </div>
-                                </div>
-                                <div className="col-12 row m-0 mb-3">
-                                    <label for="fatsInput" className="form-label col-lg-4 col-12 m-auto">Fats</label>
-                                    <div className="col-lg-8 col-12 p-0">
-                                        <input type="text" 
-                                            className="form-control" 
-                                            id="fatsInput" 
-                                            placeholder = "0"
-                                            value={fats}
-                                            onChange={handleFats}    
-                                            />
-                                    </div>
-                                </div>
-                                <div className=" col-12 row m-0 mb-3">
-                                    <label for="caloriecalc" className="form-label col-lg-4 col-12 m-auto">Calories</label>
-                                    <div className="col-lg-8 col-12 p-0">
-                                        <input type="text"
-                                            className="form-control" 
-                                            id="caloriecalc" 
-                                            placeholder = "0"
-                                            value={calories} 
-                                            disabled
-                                        />
-                                    </div>
-                                </div>
-                            </form>
-                            <Button color="success" onClick={handleSubmit}>Update</Button>{' '}
-                            <Button color="secondary" onClick={toggle}>Cancel</Button>
-                        </ModalBody>
-                    </Modal>
+                
                 </div>
             </td>}
         </motion.tr>
+        <Modal isOpen={modal} toggle={toggle} className="container">
+            <ModalBody>
+                <h2 className="display-6">Update Dish</h2>
+                <hr/>
+                <form className="row">
+                    <div className="row col-12 m-0 mb-3">
+                        <label for="dishName" className="form-label col-lg-4 col-12 m-auto">Dish Name</label>
+                        <div className="col-lg-8 col-12 p-0">
+                            <input type="text" 
+                                className="form-control" 
+                                id="dishName" 
+                                value = {name}
+                                onChange = {handleName}      
+                            />
+                        </div>
+                    </div>
+                    <div className="col-12 row m-0 mb-3">
+                        <label for="proteinInput" className="form-label col-lg-4 col-12 m-auto">Proteins</label>
+                        <div className="col-lg-8 col-12 p-0">
+                            <input type="text" 
+                                className="form-control" 
+                                id="proteinInput" 
+                                placeholder = "0"
+                                value={proteins}
+                                onChange={handleProtein}
+                                />
+                        </div>
+                    </div>
+                    <div className="col-12 row m-0 mb-3">
+                        <label for="carbInput" className="form-label col-lg-4 col-12 m-auto">Carbs</label>
+                        <div className="col-lg-8 col-12 p-0">
+                            <input type="text" 
+                                className="form-control" 
+                                id="carbInput" 
+                                placeholder = "0"
+                                value={carbs}
+                                onChange={handleCarbs}    
+                                />
+                        </div>
+                    </div>
+                    <div className="col-12 row m-0 mb-3">
+                        <label for="fatsInput" className="form-label col-lg-4 col-12 m-auto">Fats</label>
+                        <div className="col-lg-8 col-12 p-0">
+                            <input type="text" 
+                                className="form-control" 
+                                id="fatsInput" 
+                                placeholder = "0"
+                                value={fats}
+                                onChange={handleFats}    
+                                />
+                        </div>
+                    </div>
+                    <div className=" col-12 row m-0 mb-3">
+                        <label for="caloriecalc" className="form-label col-lg-4 col-12 m-auto">Calories</label>
+                        <div className="col-lg-8 col-12 p-0">
+                            <input type="text"
+                                className="form-control" 
+                                id="caloriecalc" 
+                                placeholder = "0"
+                                value={calories} 
+                                disabled
+                            />
+                        </div>
+                    </div>
+                </form>
+                <Button color="success" onClick={handleSubmit}>Update</Button>{' '}
+                <Button color="secondary" onClick={toggle}>Cancel</Button>
+            </ModalBody>
+        </Modal>
+        </>
     )
 }
 

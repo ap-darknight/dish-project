@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const variants = {
     open: {
@@ -40,7 +41,7 @@ export const Navigation = ({display}) => (
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
             >
-                <a href="/user" className="nav-link  text-dark">User</a>
+                <Link to="/user" className="nav-link  text-dark">User</Link>
             </motion.li>
             <motion.li
                 className=" "
@@ -48,7 +49,7 @@ export const Navigation = ({display}) => (
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
             >
-                <a href="/admin" className="nav-link text-dark">Admin</a>
+                <Link to="/admin" className="nav-link text-dark">Admin</Link>
             </motion.li>
             
         </motion.ul>
