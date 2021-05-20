@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/dish-project/static/css/main.fb0d3bc6.chunk.css",
-    "main.js": "/dish-project/static/js/main.3487c741.chunk.js",
-    "main.js.map": "/dish-project/static/js/main.3487c741.chunk.js.map",
+    "main.js": "/dish-project/static/js/main.3385b236.chunk.js",
+    "main.js.map": "/dish-project/static/js/main.3385b236.chunk.js.map",
     "runtime-main.js": "/dish-project/static/js/runtime-main.8c58ce2d.js",
     "runtime-main.js.map": "/dish-project/static/js/runtime-main.8c58ce2d.js.map",
-    "static/js/2.02857bd5.chunk.js": "/dish-project/static/js/2.02857bd5.chunk.js",
-    "static/js/2.02857bd5.chunk.js.map": "/dish-project/static/js/2.02857bd5.chunk.js.map",
+    "static/js/2.c15f8e24.chunk.js": "/dish-project/static/js/2.c15f8e24.chunk.js",
+    "static/js/2.c15f8e24.chunk.js.map": "/dish-project/static/js/2.c15f8e24.chunk.js.map",
     "static/js/3.ef35b171.chunk.js": "/dish-project/static/js/3.ef35b171.chunk.js",
     "static/js/3.ef35b171.chunk.js.map": "/dish-project/static/js/3.ef35b171.chunk.js.map",
     "index.html": "/dish-project/index.html",
     "static/css/main.fb0d3bc6.chunk.css.map": "/dish-project/static/css/main.fb0d3bc6.chunk.css.map",
-    "static/js/2.02857bd5.chunk.js.LICENSE.txt": "/dish-project/static/js/2.02857bd5.chunk.js.LICENSE.txt",
+    "static/js/2.c15f8e24.chunk.js.LICENSE.txt": "/dish-project/static/js/2.c15f8e24.chunk.js.LICENSE.txt",
     "static/media/user_back.2b63f168.jpg": "/dish-project/static/media/user_back.2b63f168.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8c58ce2d.js",
-    "static/js/2.02857bd5.chunk.js",
+    "static/js/2.c15f8e24.chunk.js",
     "static/css/main.fb0d3bc6.chunk.css",
-    "static/js/main.3487c741.chunk.js"
+    "static/js/main.3385b236.chunk.js"
   ]
 }
