@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {motion} from 'framer-motion';
 import PutDish from '../Dish/PutDish';
 import store from '../../Redux/store';
 

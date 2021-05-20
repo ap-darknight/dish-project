@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {motion, useReducedMotion} from 'framer-motion';
-import {useSelector, useDispatch} from 'react-redux';
+import {motion} from 'framer-motion';
+import { useDispatch} from 'react-redux';
 import addDish from '../../Redux/Actions/addDish';
 import {v4} from 'uuid';
 

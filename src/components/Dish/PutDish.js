@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import {useDispatch} from 'react-redux';
 import deleteDish from '../../Redux/Actions/deleteDish'
 import addDish from '../../Redux/Actions/addDish'
-import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalBody} from 'reactstrap';
 
 const PutDish = ({obj, index, admin}) => {
     const dispatch = useDispatch();

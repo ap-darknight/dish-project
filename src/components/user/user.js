@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import {motion} from 'framer-motion';
+import React, { useState } from 'react';
 import DishDisplay from '../Dish/DishDisplay';
 import user_back from '../../assets/img/user_back.jpg'
 import store from '../../Redux/store';
@@ -9,10 +8,7 @@ const User = () => {
     const [data, setData] = useState('');
     const [display, setDisplay] = useState('d-none');
     var [VectorData,setVectorData] = useState([]);
-    // useEffect(() => {
-
-    // }, [display]);
-
+    
     const handleData = (e) => {
         e.preventDefault();
         setData(e.target.value);
